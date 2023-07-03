@@ -1,9 +1,10 @@
 import { createStore } from 'redux';
+import { CounterState } from '../libs/types';
 
-const initialState = { counter: 0 };
+const initialState: CounterState = { counter: 0 };
 
 const counterReducer = (
-  state: { counter: number } = initialState,
+  state: CounterState = initialState,
   action: { type: string }
 ) => {
   switch (action.type) {
