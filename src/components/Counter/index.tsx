@@ -4,14 +4,14 @@ import { counterActions } from '../../store';
 
 import styles from './styles.module.css';
 
-import { AppState } from '../../libs/types';
+import { RootState } from '../../libs/types';
 
 const Counter = () => {
   const dispatch = useDispatch();
 
-  const counter = useSelector((state: AppState) => state.counter.counter);
+  const counter = useSelector((state: RootState) => state.counter.counter);
   const showCounter = useSelector(
-    (state: AppState) => state.counter.showCounter
+    (state: RootState) => state.counter.showCounter
   );
 
   const handleIncrement = () => {

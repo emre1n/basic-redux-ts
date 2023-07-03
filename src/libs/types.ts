@@ -12,7 +12,7 @@ export interface CounterAction {
   amount: number;
 }
 
-export interface AppState {
+export interface RootState {
   counter: CounterState;
   auth: AuthState;
 }

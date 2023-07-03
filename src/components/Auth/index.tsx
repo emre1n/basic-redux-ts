@@ -1,10 +1,21 @@
+import { useDispatch } from 'react-redux';
+
 import styles from './styles.module.css';
+import { authActions } from '../../store';
 
 const Auth = () => {
+  const dispatch = useDispatch();
+
+  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    dispatch(authActions.login());
+  };
+
   return (
     <main className={styles.auth}>
       <section>
-        <form>
+        <form onSubmit={handleLogin}>
           <div className={styles.control}>
             <label htmlFor="email">Email</label>
             <input type="email" id="email" autoComplete="username" />
