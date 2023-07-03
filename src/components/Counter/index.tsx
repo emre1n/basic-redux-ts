@@ -4,13 +4,15 @@ import { counterActions } from '../../store';
 
 import styles from './styles.module.css';
 
-import { CounterState } from '../../libs/types';
+import { AppState } from '../../libs/types';
 
 const Counter = () => {
-  const counter = useSelector((state: CounterState) => state.counter);
-  const showCounter = useSelector((state: CounterState) => state.showCounter);
-
   const dispatch = useDispatch();
+
+  const counter = useSelector((state: AppState) => state.counter.counter);
+  const showCounter = useSelector(
+    (state: AppState) => state.counter.showCounter
+  );
 
   const handleIncrement = () => {
     dispatch(counterActions.increment());
