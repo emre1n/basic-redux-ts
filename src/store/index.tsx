@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction, configureStore } from '@reduxjs/toolkit';
-import { CounterState, CounterAction } from '../libs/types';
+import { CounterState } from '../libs/types';
 
 const initialState: CounterState = { counter: 0, showCounter: true };
 
@@ -26,4 +26,5 @@ const store = configureStore({
   reducer: counterSlice.reducer,
 });
 
+export const counterActions = counterSlice.actions;
 export default store;
