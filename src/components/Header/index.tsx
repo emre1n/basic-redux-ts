@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import styles from './styles.module.css';
 import { RootState } from '../../libs/types';
-import { authActions } from '../../store';
+import { authActions } from '../../store/slices/auth.store';
 
 const Header = () => {
   const dispatch = useDispatch();
